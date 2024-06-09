@@ -10,16 +10,20 @@ const GET_USER = gql`
     }
   }
 `;
-
 function User() {
-  const { laoding, data, error } = useQuery(GET_USER);
-  const [id, setId] = useState();
+  const [id, setId] = useState(1);
+  const { loading, data, error } = useQuery(GET_USER, {
+    variables: { id: id },
+  });
   const changeHandler = (e) => {
     setId(e.target.value);
   };
+console.log({ loading, data, error });
+
   return (
     <div>
       <input value={id} onChange={changeHandler} />
+      {/* <h3>{data.user.name}</h3> */}
     </div>
   );
 }
