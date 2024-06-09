@@ -1,9 +1,11 @@
+import User from "./components/User";
 import Users from "./components/Users";
 
 function App() {
   return (
     <div className="App">
-      <Users />
+      {/* <Users /> */}
+      <User />
     </div>
   );
 }
