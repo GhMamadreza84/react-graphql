@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 const GET_USERS = gql`
-  query {
+  query getUser(){
     user(id: 5) {
       id
       name
@@ -12,9 +12,8 @@ const GET_USERS = gql`
 `;
 
 function User() {
-  const { loading, data, error } = useQuery();
   const [id, setId] = useState();
-  const changeHandler = () => {
+  const changeHandler = (e) => {
     setId(e.target.value);
   };
   return (
