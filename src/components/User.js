@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
-const GET_USERS = gql`
-  query getUser(){
-    user(id: 5) {
+const GET_USER = gql`
+  query getUser($id: ID!) {
+    user(id: $id) {
       id
       name
       email
@@ -12,6 +12,7 @@ const GET_USERS = gql`
 `;
 
 function User() {
+  const { laoding, data, error } = useQuery(GET_USER);
   const [id, setId] = useState();
   const changeHandler = (e) => {
     setId(e.target.value);
