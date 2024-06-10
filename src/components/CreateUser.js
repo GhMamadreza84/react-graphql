@@ -27,6 +27,10 @@ function CreateUser() {
     <div>
       Create User
       <button onClick={() => createUser()}>Create User </button>
+      {/* <h1>{data.name}</h1>
+      <p>{data.username}</p>
+      <p>{data.email}</p>
+      <p>{data.phone}</p> */}
     </div>
   );
 }
