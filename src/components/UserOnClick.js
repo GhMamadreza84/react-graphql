@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { gql, useLazyQuery} from "@apollo/client";
+import { gql, useLazyQuery } from "@apollo/client";
 import { GET_USER } from "../graphql/queries";
 function UserOnClick() {
   const [id, setId] = useState(1);
-  const response = useLazyQuery(GET_USER, {
+  const [getUser, { loading, data, error }] = useLazyQuery(GET_USER, {
     variables: { id: id },
   });
   const changeHandler = (e) => {
@@ -14,7 +14,7 @@ function UserOnClick() {
   return (
     <div>
       <input value={id} onChange={changeHandler} />
-      <button onClick={()=>console.log("click")}>search user</button>
+      <button onClick={() => console.log("click")}>search user</button>
       {/* {data ? (
         <>
           <h1>{data.user.name}</h1>
