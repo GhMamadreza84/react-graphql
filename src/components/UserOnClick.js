@@ -9,7 +9,7 @@ function UserOnClick() {
   const changeHandler = (e) => {
     setId(e.target.value);
   };
-  console.log(response);
+  // console.log(response);
 
   return (
     <div>
