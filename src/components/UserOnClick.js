@@ -15,6 +15,8 @@ function UserOnClick() {
     <div>
       <input value={id} onChange={changeHandler} />
       <button onClick={() => getUser()}>search user</button>
+      {loading && <h1>Loading ...</h1>}
+      {error && <h1>Error ...</h1>}
       {data ? (
         <>
           <h1>{data.user.name}</h1>
