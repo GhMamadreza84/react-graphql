@@ -11,12 +11,13 @@ function UpdateUser() {
       }
     }
   `;
-  const [updateUser, { loading, data, error }] = useMutation(UPDATE_USER);
-
+  const [updateUser, { loading, data, error, called }] =
+    useMutation(UPDATE_USER);
+  console.log(updateUser, { loading, data, error, called });
   return (
     <div>
       <h1>Update User</h1>
-      <button onClick={updateUser()}>Update</button>
+      <button onClick={() => updateUser()}>Update</button>
     </div>
   );
 }
