@@ -1,3 +1,4 @@
+import CreateUser from "./components/CreateUser";
 import User from "./components/User";
 import UserOnClick from "./components/UserOnClick";
 import Users from "./components/Users";
@@ -7,7 +8,8 @@ function App() {
     <div className="App">
       {/* <Users /> */}
       {/* <User /> */}
-      <UserOnClick />
+      {/* <UserOnClick /> */}
+      <CreateUser />
     </div>
   );
 }
