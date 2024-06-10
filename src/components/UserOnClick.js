@@ -14,8 +14,8 @@ function UserOnClick() {
   return (
     <div>
       <input value={id} onChange={changeHandler} />
-      <button onClick={() => console.log("click")}>search user</button>
-      {/* {data ? (
+      <button onClick={() => getUser()}>search user</button>
+      {data ? (
         <>
           <h1>{data.user.name}</h1>
           <p>{data.user.email}</p>
@@ -23,7 +23,7 @@ function UserOnClick() {
         </>
       ) : (
         ""
-      )} */}
+      )}
     </div>
   );
 }
