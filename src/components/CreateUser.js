@@ -19,11 +19,16 @@ const CREATE_USER = gql`
   }
 `;
 function CreateUser() {
-  const [createUser , {loading,data,error}] = useMutation(CREATE_USER)
-  console.log(createUser,{loading,data,error});
-  return <div>
-    Create User
-  </div>;
+  const [createUser, { loading, data, error, called }] =
+    useMutation(CREATE_USER);
+
+  console.log(createUser, { loading, data, error, called });
+  return (
+    <div>
+      Create User
+      <button onClick={() => createUser()}>Create User </button>
+    </div>
+  );
 }
 
 export default CreateUser;
