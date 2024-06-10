@@ -9,12 +9,12 @@ function UserOnClick() {
   const changeHandler = (e) => {
     setId(e.target.value);
   };
-  console.log({ loading, data, error });
+  console.log(response);
 
   return (
     <div>
       <input value={id} onChange={changeHandler} />
-      <button >search user</button>
+      <button onClick={()=>console.log("click")}>search user</button>
       {/* {data ? (
         <>
           <h1>{data.user.name}</h1>
