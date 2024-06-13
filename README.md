@@ -1,1 +1,1 @@
-# This Respoitory For Practice
+# This Respository For Practice
